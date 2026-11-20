@@ -16,5 +16,6 @@ podman-compose up -d --build
 echo ">> Eliminando imágenes antiguas sin uso..."
 podman image prune -f
 
+
 echo ">> Estado actual:"
 podman-compose ps
