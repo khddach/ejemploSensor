@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: "${SPRING_DATASOURCE_URL:jdbc:mariadb://localhost:3306/ejemplo}"
+    username: "${SPRING_DATASOURCE_USERNAME:usuario}"
+    password: "${SPRING_DATASOURCE_PASSWORD:usuario}"
+
+  sql:
+    init:
+      mode: never
+
+  jpa:
+    hibernate:
+      ddl-auto: "${SPRING_JPA_HIBERNATE_DDL_AUTO:update}"
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
